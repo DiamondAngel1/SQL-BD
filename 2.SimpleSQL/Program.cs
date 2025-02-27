@@ -5,7 +5,6 @@ namespace _2.SimpleSQL{
         static void Main(string[] args){
             Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;
-            
             int option = 1;
             do{
                 Console.WriteLine("Оберіть варіант: ");

@@ -10,9 +10,8 @@ namespace _2.SimpleSQL.Data
 {
     public class Context : DbContext{
         public DbSet<UserEntity> Users { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Data Source=Cool.bomb");
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
+            optionsBuilder.UseSqlServer("Data Source=.;Integrated Security=True;TrustServerCertificate=True;Initial Catalog=FirstSql;");
         }
     }
 }

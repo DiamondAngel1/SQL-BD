@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace _2.SimpleSQL.Data.Entitis{
     public static class Database{
         public static void SeedData(){
             
             using (Context context = new Context()){
-                context.Database.Migrate();
                 if (!context.Users.Any()){
                     var users = new List<UserEntity>(){
                         new UserEntity { FName = "Іван", LName = "Мудрий", Phone="380660458699", Birthday = new DateOnly(2000,02,23)},
